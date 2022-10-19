@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import {
-  auth,
   createAuthUserWithEmailAndPassword,
   CreateUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
@@ -47,10 +46,8 @@ const SignUpForm = () => {
         password
       );
 
-      //user.displayName = displayName;
       await CreateUserDocumentFromAuth(user, { displayName });
       resetFormFields();
-      // Create user Document on Firestore
     } catch (error) {}
   };
 
