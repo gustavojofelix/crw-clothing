@@ -25,7 +25,7 @@ const App = () => {
     });
 
     return unsbscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <Routes>
